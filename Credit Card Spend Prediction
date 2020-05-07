@@ -1,0 +1,21 @@
+# import relevant modules
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import statsmodels.formula.api as sn
+import scipy.stats as stats
+from matplotlib.backends.backend_pdf import PdfPages
+from sklearn.model_selection import train_test_split
+from sklearn import metrics
+from sklearn.linear_model import LogisticRegression
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from patsy import dmatrices
+%matplotlib inline
+
+# Ignore warnings
+import warnings
+warnings.filterwarnings('ignore')
+custdata_df = pd.read_excel("Data Set.xlsx")
+custdata_df.head(5)
+custdata_df.columns
